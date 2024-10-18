@@ -1,0 +1,390 @@
+    <!DOCTYPE html>
+    <html lang="ca">
+    <head>
+    <link rel="stylesheet" href="css/style.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cinema Responsive</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <style>
+            body {
+                scroll-behavior: smooth;
+                font-family: 'Arial', sans-serif;
+            }
+            .hero {
+                background-image: url('fons1.jpg');
+                background-size: cover;
+                height: 100vh;
+                color: white;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+            }
+
+            .hero::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.6); 
+            }
+
+            .hero h1, .hero p, .hero a {
+                position: relative;
+                z-index: 1;
+            }
+
+            .section-title {
+                text-align: center;
+                margin-top: 2rem;
+                margin-bottom: 2rem;
+                color: #333;
+                font-weight: bold;
+            }
+            
+            .card-body {
+                background-color: #f8f9fa;
+                padding: 1.5rem;
+            }
+
+            footer {
+                background-color: #343a40;
+                color: #fff;
+            }
+
+            .navbar-brand, .nav-link {
+                font-weight: bold;
+            }
+
+          
+            .carousel-control-prev-icon,
+            .carousel-control-next-icon {
+                background-color: #000;
+            }
+
+            .btn-primary {
+    background-color: #b22222; 
+    border-color: #b22222;
+    color: white;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #ff4d4d; 
+    border-color: #ff4d4d;
+    color: white;
+}
+
+.btn-primary:active {
+    background-color: #800000; 
+    border-color: #800000;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #b22222;
+    transition: color 0.3s ease; 
+}
+.rounded-circle {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            margin: 0 auto;
+            display: block;
+        }
+
+
+        </style>
+    </head>
+    <body>
+
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand"  style="color: #b22222;" href="#home">Cinema Responsive</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link " href="#cartellera">Cartellera</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#esdeveniments">Esdeveniments</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#preus">Preus</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contacte">Contacte</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section id="home" class="hero d-flex align-items-center">
+            <div class="container">
+                <h1 style="font-weight: bolder;" class="display-3"><strong>Benvingut a Cinema Responsive</strong></h1>
+                <p class="lead" style="color: #f8f9fa;">El millor lloc per gaudir del cinema</p>
+                <a href="#cartellera" class="btn btn-primary btn-lg">Reserva ara la teva entrada</a>
+            </div>
+        </section>
+
+        <div class="container my-5">
+            <h2 style="color: #b22222;" class="text-center mb-4">  <strong>Els nostres clients</strong></h2>
+    
+            <div class="row">
+                <!-- Ressenya 1 -->
+                <div class="col-md-4">
+                    <div class="card shadow-sm mb-4 text-center">
+                        <img src="davida.jpg" alt="Foto de David Antúnez" class="rounded-circle mt-4">
+                        <div class="card-body">
+                            <h5 class="card-title">David Antúnez</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">⭐⭐⭐⭐⭐</h6>
+                            <p class="card-text">"Una experiència fantàstica! El personal va ser molt amable, i la qualitat de la projecció va ser excel·lent."</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Ressenya 2 -->
+                <div class="col-md-4">
+                    <div class="card shadow-sm mb-4 text-center">
+                        <img src="pauduran.jpg" alt="Foto de Pau Duran" class="rounded-circle mt-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Pau Duran</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">⭐⭐⭐⭐</h6>
+                            <p class="card-text">"Un bon lloc per gaudir d'una bona pel·lícula, però el sistema de so podria millorar una mica."</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Ressenya 3 -->
+                <div class="col-md-4">
+                    <div class="card shadow-sm mb-4 text-center">
+                        <img src="delfina.jpg" alt="Foto de Marc Puig" class="rounded-circle mt-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Delfina García</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">⭐⭐⭐⭐⭐</h6>
+                            <p class="card-text">"M'encanta aquest cinema local! Sempre tenen una selecció de pel·lícules independent molt interessant."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cartellera Section -->
+        <section id="cartellera" class="py-5">
+            <div class="container">
+                <h2 class="section-title">Pel·lícules en Cartellera</h2>
+                <div class="row">
+                    
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="imatge1.webp" class="card-img-top" alt="The Substance">
+                            <div class="card-body">
+                                <h5 class="card-title">The Substance</h5>
+                                <p class="card-text">Una intrigant pel·lícula que explora els límits de la ciència i la moralitat.</p>
+                                <p>Horaris: 18:00, 20:30, 22:45</p>
+                                <a href="https://www.youtube.com/watch?v=LNlrGhBpYjc" target="_blank" class="btn btn-primary">Veure Tràiler</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="Imatge 2.jpg" class="card-img-top" alt="Interstellar">
+                            <div class="card-body">
+                                <h5 class="card-title">Interstellar</h5>
+                                <p class="card-text">Gaudeix de la restrena d'una èpica aventura espacial dirigida per Christopher Nolan.</p>
+                                <p>Horaris: 17:00, 19:30, 21:45</p>
+                                <a href="https://www.youtube.com/watch?v=zSWdZVtXT7E" target="_blank" class="btn btn-primary">Veure Tràiler</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="imatge3.jpg" class="card-img-top" alt="La Casa en Flames">
+                            <div class="card-body">
+                                <h5 class="card-title">La Casa en Flames</h5>
+                                <p class="card-text">Un thriller intens que et mantindrà en suspens fins al final.</p>
+                                <p>Horaris: 16:00, 18:30, 21:00</p>
+                                <a href="https://www.youtube.com/watch?v=w_Qadyw8Bj8" target="_blank" class="btn btn-primary">Veure Tràiler</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Esdeveniments Section -->
+        <section id="esdeveniments" class="py-5">
+            <div class="container">
+                <h2 style="color: #b22222;" class="section-title">Esdeveniments Especials</h2>
+                <div class="row">
+                    <div class="col-md-4">
+                        <h3>Black and White Cinema</h3>
+                        <p>Marató de pel·lícules en blanc i negre. Data: 20 d'octubre. Hora: 20:00.</p>
+                        <div id="carouselExample" class="carousel slide">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="blanc i negre 1.jpg" class="d-block w-100 img-fluid" alt="Manhattan">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="blanc i negre 2.jpg" class="d-block w-100 img-fluid" alt="Some like it hot">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="blanc i negre 3.jpeg" class="d-block w-100 img-fluid" alt="Frances Ha">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                        <a target="_blank" class="btn btn-primary" href="#contacte" style="margin-top: 15px;">Inscriu-te</a>
+                    </div>
+
+                    <div class="col-md-4">
+                        <h3>Asian Cinema</h3>
+                        <p>Millors pel·lícules asiàtiques. Data: 25 d'octubre. Hora: 18:00 - 02:00.</p>
+                        <div id="carouselExample2" class="carousel slide">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="Asiatica 1.webp" class="d-block w-100 img-fluid" alt="Parasites">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="Asiatica 2.jpg" class="d-block w-100 img-fluid" alt="Past Lives">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="Asiatica 3.jpg" class="d-block w-100 img-fluid" alt="Old Boy">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample2" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample2" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                        <a target="_blank" class="btn btn-primary" href="#contacte" style="margin-top: 15px;">Inscriu-te</a>
+                    </div>
+
+                    <div class="col-md-4">
+                        <h3>Cinema Català</h3>
+                        <p>Una nit dedicada al millor del cinema català. Data: 30 d'octubre. Hora: 19:00.</p>
+                        <div id="carouselExample3" class="carousel slide">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="catala1.jpg" class="d-block w-100 img-fluid" alt="Pa Negre">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="catala2" class="d-block w-100 img-fluid" alt="Estiu 1993">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="catala3.webp" class="d-block w-100 img-fluid" alt="El Orfanato">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample3" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample3" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                        <a target="_blank" class="btn btn-primary" href="#contacte" style="margin-top: 15px;">Inscriu-te</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Preus Section -->
+    <section id="preus" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title">Preus de les Entrades</h2>
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Entrada General</h5>
+                            <p class="card-text">Gaudeix de qualsevol pel·lícula en cartellera amb la teva entrada general.</p>
+                            <h3 class="card-price">8,50€</h3>
+                            <a href="#contacte" class="btn btn-primary">Comprar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Entrada Reduïda</h5>
+                            <p class="card-text">Descompte per a estudiants, jubilats i nens menors de 12 anys.</p>
+                            <h3 class="card-price">6,50€</h3>
+                            <a href="#contacte" class="btn btn-primary">Comprar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Pack Familiar</h5>
+                            <p class="card-text">Gaudeix en família amb el nostre pack especial per a 4 persones.</p>
+                            <h3 class="card-price">25,00€</h3>
+                            <a href="#contacte" class="btn btn-primary">Comprar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+        <!-- Contacte Section -->
+        <section id="contacte" class="py-5">
+            <div class="container">
+                <h2 style="color: #b22222;" class="section-title">Contacte</h2>
+                <form>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Nom</label>
+                        <input type="text" class="form-control" id="name" placeholder="El teu nom">
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="El teu email">
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Missatge</label>
+                        <textarea class="form-control" id="message" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center py-3">
+            <div class="container">
+                <p>&copy; 2024 Cinema Responsive. Tots els drets reservats.</p>
+            </div>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js">
+            
+        </script>
+
+    </body>
+    </html>
